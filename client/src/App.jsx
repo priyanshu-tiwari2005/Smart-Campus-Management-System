@@ -143,7 +143,7 @@ const Login = ({ setIsLoggedIn }) => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/login",
+        `${API_URL}/api/auth/login`,
         {
           method: "POST",
           headers: {
@@ -356,7 +356,7 @@ function App() {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/admin/stats",
+        `${API_URL}/api/admin/stats`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

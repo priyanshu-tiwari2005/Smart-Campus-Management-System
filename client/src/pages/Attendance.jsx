@@ -32,7 +32,7 @@ const Attendance = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/admin/students",
+        `${API_URL}/api/admin/students`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -77,7 +77,7 @@ const Attendance = () => {
       });
 
       const response = await fetch(
-        `http://localhost:5000/api/attendance/overview?${params.toString()}`,
+        `${API_URL}/api/attendance/overview?${params.toString()}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -115,7 +115,7 @@ const Attendance = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/attendance/summary/${studentId}?month=${month}`,
+        `${API_URL}/api/attendance/summary/${studentId}?month=${month}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -150,7 +150,7 @@ const Attendance = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/attendance/student/${studentId}?month=${month}`,
+        `${API_URL}/api/attendance/student/${studentId}?month=${month}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -294,7 +294,7 @@ const Attendance = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/attendance/mark",
+        `${API_URL}/api/attendance/mark`,
         {
           method: "POST",
           headers: {

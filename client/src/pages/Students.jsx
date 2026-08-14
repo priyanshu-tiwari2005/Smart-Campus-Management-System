@@ -50,7 +50,7 @@ const Students = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/admin/students/course/${encodeURIComponent(
+        `${API_URL}/api/admin/students/course/${encodeURIComponent(
           course
         )}/branch/${encodeURIComponent(branch)}`,
         {
@@ -159,7 +159,7 @@ const Students = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/register",
+        `${API_URL}/api/auth/register`,
         {
           method: "POST",
           headers: {
@@ -288,7 +288,7 @@ const Students = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/admin/students/${editingStudent._id}/academic`,
+        `${API_URL}/api/admin/students/${editingStudent._id}/academic`,
         {
           method: "PATCH",
           headers: {
@@ -346,7 +346,7 @@ const Students = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/admin/students/${id}`,
+        `${API_URL}/api/admin/students/${id}`,
         {
           method: "DELETE",
           headers: {

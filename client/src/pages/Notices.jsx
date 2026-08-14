@@ -23,7 +23,7 @@ const Notices = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/notices",
+        `${API_URL}/api/notices`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -97,7 +97,7 @@ const Notices = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/notices",
+        `${API_URL}/api/notices`,
         {
           method: "POST",
 
@@ -168,7 +168,7 @@ const Notices = () => {
         localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/notices/${id}`,
+        `${API_URL}/api/notices/${id}`,
         {
           method: "DELETE",
 

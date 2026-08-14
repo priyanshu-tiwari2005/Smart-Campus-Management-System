@@ -20,7 +20,7 @@ const Faculty = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/admin/faculty",
+        `${API_URL}/api/admin/faculty`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -69,7 +69,7 @@ const Faculty = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/register",
+        `${API_URL}/api/auth/register`,
         {
           method: "POST",
 
@@ -127,7 +127,7 @@ const Faculty = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/admin/faculty/${id}`,
+        `${API_URL}/api/admin/faculty/${id}`,
         {
           method: "DELETE",
 

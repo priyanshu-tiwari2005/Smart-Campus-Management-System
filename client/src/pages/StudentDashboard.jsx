@@ -23,7 +23,7 @@ const StudentDashboard = ({ logout }) => {
   const getAttendance = async (month) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/attendance/student/${user.id}?month=${month}`,
+        `${API_URL}/api/attendance/student/${user.id}?month=${month}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -52,7 +52,7 @@ const StudentDashboard = ({ logout }) => {
   const getSummary = async (month) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/attendance/summary/${user.id}?month=${month}`,
+        `${API_URL}/api/attendance/summary/${user.id}?month=${month}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -81,7 +81,7 @@ const StudentDashboard = ({ logout }) => {
   const getNotices = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/notices",
+        `${API_URL}/api/notices`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -63,7 +63,7 @@ const FacultyDashboard = ({ logout }) => {
   const getTotalStudents = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/admin/students",
+        `${API_URL}/api/admin/students`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -101,7 +101,7 @@ const FacultyDashboard = ({ logout }) => {
   ) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/students/course/${encodeURIComponent(
+        `${API_URL}/api/admin/students/course/${encodeURIComponent(
           course
         )}/branch/${encodeURIComponent(branch)}`,
         {
@@ -142,7 +142,7 @@ const FacultyDashboard = ({ logout }) => {
   const getNotices = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/notices",
+        `${API_URL}/api/notices`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -192,7 +192,7 @@ const FacultyDashboard = ({ logout }) => {
       });
 
       const response = await fetch(
-        `http://localhost:5000/api/attendance/overview?${params.toString()}`,
+        `${API_URL}/api/attendance/overview?${params.toString()}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -231,7 +231,7 @@ const FacultyDashboard = ({ logout }) => {
   ) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/attendance/summary/${studentId}?month=${month}`,
+        `${API_URL}/api/attendance/summary/${studentId}?month=${month}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -269,7 +269,7 @@ const FacultyDashboard = ({ logout }) => {
   ) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/attendance/student/${studentId}?month=${month}`,
+        `${API_URL}/api/attendance/student/${studentId}?month=${month}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -461,7 +461,7 @@ const FacultyDashboard = ({ logout }) => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/attendance/mark",
+        `${API_URL}/api/attendance/mark`,
         {
           method: "POST",
           headers: {
