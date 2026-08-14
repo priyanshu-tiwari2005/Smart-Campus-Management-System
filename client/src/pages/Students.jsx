@@ -1,3 +1,4 @@
+import { API_URL } from "./api";
 import { useState } from "react";
 import { academicOptions } from "../data/academicOptions";
 
